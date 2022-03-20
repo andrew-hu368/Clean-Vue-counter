@@ -5,7 +5,7 @@ export const decrement = (count, amount = 1) => (count -= amount);
 export const limitedIncrement = (count, upperBound = Infinity, amount = 1) =>
   count < upperBound ? increment(count, amount) : upperBound;
 
-export const limitedDecrement = (count, lowerBound = Infinity, amount = 1) =>
+export const limitedDecrement = (count, lowerBound = -Infinity, amount = 1) =>
   count > lowerBound ? decrement(count, amount) : lowerBound;
 
 export const limitedIncrementWithMessage = (
